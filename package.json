@@ -2,6 +2,7 @@
   "name": "sappl",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hrod55.github.io/sappl",
   "dependencies": {
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
