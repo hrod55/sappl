@@ -1,38 +1,60 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: #17324d;
+  background: linear-gradient(180deg, #a9ddff 0%, #e8f7ff 72%, #ffffff 100%);
 }
 
-.App-link {
-  color: #61dafb;
+.App h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  letter-spacing: -0.04em;
 }
 
-@keyframes App-logo-spin {
+.sky {
+  width: 100%;
+  min-height: min(58vh, 34rem);
+  display: grid;
+  place-items: center;
+}
+
+.flying-pig {
+  display: block;
+  width: clamp(12rem, 32vw, 25rem);
+  height: auto;
+  animation: pig-flight 7s ease-in-out infinite alternate;
+}
+
+.art-credit {
+  color: #315d7c;
+  font-size: 0.875rem;
+  text-underline-offset: 0.2em;
+}
+
+.art-credit:hover,
+.art-credit:focus-visible {
+  color: #17324d;
+}
+
+@keyframes pig-flight {
   from {
-    transform: rotate(0deg);
+    transform: translate(-24vw, 0.75rem) rotate(-5deg);
   }
+
   to {
-    transform: rotate(360deg);
+    transform: translate(24vw, -0.75rem) rotate(5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flying-pig {
+    animation: none;
   }
 }

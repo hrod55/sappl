@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the flying pig', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /when pigs fly/i })).toBeInTheDocument();
+  expect(
+    screen.getByRole('img', { name: /pig with wings flying through the sky/i })
+  ).toBeInTheDocument();
 });

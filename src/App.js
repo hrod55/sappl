@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <h1>When pigs fly</h1>
+      <div className="sky">
+        <img
+          className="flying-pig"
+          src={`${process.env.PUBLIC_URL}/flying-pig.svg`}
+          alt="A pig with wings flying through the sky"
+        />
+      </div>
+      <a
+        className="art-credit"
+        href="https://openclipart.org/detail/355672/when-pigs-fly"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pig illustration by j4p4n on Openclipart · CC0
+      </a>
+    </main>
   );
 }
 
